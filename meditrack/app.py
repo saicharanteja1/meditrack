@@ -18,7 +18,7 @@ os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
 # --- AWS Setup (Hardcoded Region & SNS Topic ARN) ---
 AWS_REGION = "us-east-1"
-SNS_TOPIC_ARN = "arn:aws:sns:us-east-1:863518417312:meditrack"
+SNS_TOPIC_ARN = "arn:aws:sns:us-east-1:084828600922:meditrack"
 
 # DynamoDB Table Names
 USERS_TABLE = "meditrack_users"
@@ -235,5 +235,5 @@ def page_not_found(e):
 def server_error(e):
     return "<h1>500</h1><p>Internal server error</p>", 500
 
-if _name_ == '_main_':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0', port=5000)
