@@ -7,7 +7,7 @@ from flask import Flask, render_template, request, redirect, url_for, flash, sen
 from werkzeug.utils import secure_filename
 
 # --- Flask Configuration ---
-app = Flask(_name_)
+app = Flask(__name__)
 app.config["SECRET_KEY"] = "d2c8f7a6e5b4c3a2b1c0d9e8f7a6b5c4d3e2f1a0b9c8d7e6f5a4b3c2d1e0f9"
 app.config["UPLOAD_FOLDER"] = "uploads"
 app.config["MAX_CONTENT_LENGTH"] = 16 * 1024 * 1024
